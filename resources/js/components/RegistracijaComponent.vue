@@ -1,7 +1,7 @@
 <template>
     <head>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
     </head>
 <div class="main">
     <header class="navbar navbar-expand-lg fixed-top bg-light pt-3 pb-3" style="background-color: #E4D9D9 !important;">
@@ -120,7 +120,7 @@
 
 <div class="input-group mb-3">
 <div class="form-floating  ">
-  <input :type="showPassword ? 'text' : 'password'"  type="password" id="password" class="form-control form-control-lg" v-model="korisnik.lozinka" placeholder="Lozinka" name="password1" onkeyup="check();" />
+  <input :type="showPassword ? 'text' : 'password'"  type="password" id="password" class="form-control form-control-lg" v-model="korisnik.lozinka" placeholder="Lozinka" name="password1" onkeyup="check();" required />
   <label class="form-label" for="form3Example4cg">Lozinka</label>
 </div>
 
@@ -137,7 +137,7 @@
 
 
 <div class="valid-feedback">Good</div>
-<div class="invalid-feedback">Wrong</div>
+<div class="invalid-feedback">Wrong</div> 
     
 
 
@@ -204,7 +204,7 @@
 
 <div class="d-flex justify-content-center">
   <button type="submit"
-    class="btn btn-success btn-block btn-lg gradient-custom-4 text-body"  style="border-color: #E03ED8;background-color: #E03ED8;color: white !important;">Registriraj se!</button>
+    class="btn btn-success btn-block btn-lg  text-body"  style="border-color: #E03ED8;background-color: #E03ED8;color: white !important;">Registriraj se!</button>
 </div>
 
 <p class="text-center text-muted mt-5 mb-0">Već imaš račun? <a href="/korisnik"
@@ -469,3 +469,4 @@ addEventListener("DOMContentLoaded", (event) => {
   }
  
   </script>
+ 

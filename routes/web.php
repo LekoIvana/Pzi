@@ -18,12 +18,32 @@ use Inertia\Inertia;
 |
 */
 
-Route::get('/ee', function () {
-    return Inertia::render('Welcome', [
+Route::get('/', function () {
+    return Inertia::render('ExampleComponent', [
         'canLogin' => Route::has('login'),
         'canRegister' => Route::has('register'),
         'laravelVersion' => Application::VERSION,
         'phpVersion' => PHP_VERSION,
+    ]);
+});
+Route::get('/adresa', function () {
+    return Inertia::render('AdresaComponent', [
+        
+    ]);
+});
+Route::get('/registracija', function () {
+    return Inertia::render('RegistracijaComponent', [
+        
+    ]);
+});
+Route::get('/korisnik', function () {
+    return Inertia::render('KorisnikComponent', [
+        
+    ]);
+});
+Route::get('/kosarica', function () {
+    return Inertia::render('KosaricaComponent', [
+        
     ]);
 });
 
@@ -39,9 +59,7 @@ Route::middleware('auth')->group(function () {
 
 require __DIR__.'/auth.php';
 
-Route::get('/', function () {
-    return view('welcome');
-});
+
 
 Route::get('/zene', function () {
     return view('zene');

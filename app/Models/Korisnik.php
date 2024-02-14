@@ -14,7 +14,7 @@ class Korisnik extends Model
     
     use HasFactory;
 }
-class User extends Authenticatable implements MustVerifyEmail
-{
+//class User extends Authenticatable implements MustVerifyEmail
+/*{
     
-}
+}*/
